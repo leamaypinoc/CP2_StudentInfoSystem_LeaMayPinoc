@@ -16,3 +16,8 @@ def load_students():
                         "course": data[2]
                     })
     return students
+
+def save_students(students):
+    with open(FILE_NAME, "w") as file:
+        for s in students:
+            file.write(f"{s['id']}|{s['name']}|{s['course']}\n")

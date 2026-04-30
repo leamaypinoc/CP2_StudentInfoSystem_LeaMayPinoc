@@ -49,4 +49,29 @@ def view_students(students):
     print()
 
 
+    def search_student(students):
+    keyword = input("Enter name to search: ")
+    found = False
+
+    for s in students:
+        if keyword.lower() in s['name'].lower():
+            print(f"Found: ID: {s['id']} | Name: {s['name']} | Course: {s['course']}")
+            found = True
+
+    if not found:
+        print("No student found.\n")
+
+
+def delete_student(students):
+    sid = input("Enter ID to delete: ")
+    new_list = [s for s in students if s['id'] != sid]
+
+    if len(new_list) == len(students):
+        print("Student not found.\n")
+    else:
+        save_students(new_list)
+        print("Student deleted successfully!\n")
+    return new_list
+
+
     

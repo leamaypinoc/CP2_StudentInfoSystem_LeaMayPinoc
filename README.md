@@ -38,3 +38,15 @@ def add_student(students):
     print("Student added successfully!\n")
 
     
+def view_students(students):
+    print("\n--- Student List ---")
+    if not students:
+        print("No students found.\n")
+        return
+
+    for s in students:
+        print(f"ID: {s['id']} | Name: {s['name']} | Course: {s['course']}")
+    print()
+
+
+    

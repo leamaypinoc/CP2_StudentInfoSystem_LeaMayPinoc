@@ -74,4 +74,30 @@ def delete_student(students):
     return new_list
 
 
-    
+    def main():
+    students = load_students()
+
+    while True:
+        print("===== Student Information System =====")
+        print("1. Add Student")
+        print("2. View Students")
+        print("3. Search Student")
+        print("4. Delete Student")
+        print("5. Exit")
+
+        choice = input("Enter choice: ")
+
+        if choice == "1":
+            add_student(students)
+        elif choice == "2":
+            view_students(students)
+        elif choice == "3":
+            search_student(students)
+        elif choice == "4":
+            students = delete_student(students)
+        elif choice == "5":
+            print("Exiting program...")
+            break
+        else:
+            print("Invalid input. Try again.\n")
+

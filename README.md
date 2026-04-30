@@ -100,4 +100,6 @@ def delete_student(students):
             break
         else:
             print("Invalid input. Try again.\n")
+# Run program
+main()
 
